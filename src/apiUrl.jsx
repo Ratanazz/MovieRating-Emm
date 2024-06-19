@@ -1,2 +1,2 @@
 
-export const MOVIES_API_URL = 'http://127.0.0.1:8000/api/movies';
+export const MOVIES_API_URL = 'https://backendmovierating-production.up.railway.app/api/movies';

@@ -12,7 +12,7 @@ function Profile() {
     const token = localStorage.getItem('token');
 
     // Fetch user data from the Laravel backend
-    axios.get('http://127.0.0.1:8000/api/user', {
+    axios.get('https://backendmovierating-production.up.railway.app/api/user', {
       headers: {
         'Authorization': `Bearer ${token}`
       }
