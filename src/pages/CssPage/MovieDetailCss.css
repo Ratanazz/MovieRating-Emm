@@ -1,0 +1,368 @@
+.Moviedetail-container{
+    min-height: 450vh;
+    background: #070F2B;
+}
+.detailtop-container{
+    width: 80%;
+    margin: 0 auto;
+    padding: 3rem 0 0 0;
+}
+.detailtop-container h1{
+    color: aliceblue;
+    font-size: 45px;
+    font-weight: 800;
+}
+.Detailtop{ 
+    
+    display: flex;
+    justify-content: space-between;
+}
+.Detailtop h2{
+    color: aliceblue;
+}
+.Detailtop h3{
+    color: aliceblue;
+    font-size: 18px;
+}
+.topright iframe{
+    width: 550px;
+    height: 330px;
+    border-radius: 5px;
+}
+.rating-of-movie{
+    display: flex;  
+    justify-content: space-between;
+}
+.rating-of-movie h3{
+    font-size: 24px;
+}
+.leave-your-rating h4{
+    color: #f9f9f9;
+    transition: color 0.3s ease;
+}
+.leave-your-rating .fa-star {
+    font-size: 25px; 
+  }
+.leave-your-rating{
+    cursor: pointer;
+    display: flex;
+    width: 40%;
+    margin-left: auto;
+}
+.leave-your-rating:hover h4,
+.leave-your-rating:hover .fa-star-svg-inline--fa {
+    color: #ffd700; /* Change text and icon color to golden on hover */
+}
+.topleft img{
+    width: 300px;
+    height: auto;
+    border-radius: 8px;
+}
+.red-line-heading {
+    position: relative;
+    padding-left: 10px; /* Adjust as needed */
+}
+
+.red-line-heading::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px; /* Width of the vertical line */
+    height: 100%; /* Height of the vertical line */
+    background-color: red;
+}
+.detail-info{
+    width: 80%;
+    margin: 0 auto;
+    padding: 3rem 0;
+}
+.detail-info h4{
+    color: aliceblue;
+}
+.detail-info p{
+    color: aliceblue;
+    font-size: 18px;
+    font-weight: 800px;
+}
+.moviedetail-info{
+    display: flex;
+    align-items: center;
+    padding-bottom: 1rem;
+}
+.moviedetail-info h4{
+    padding: 0  1.8rem 0 8px;
+}
+.moviedetail-info h5{
+    font-size: 20px;
+    color: aliceblue;
+}
+.social-share-buttons{
+    display: flex;
+    padding-top: 10px;
+}
+.buttonshare{
+    padding: 0px 10px ;
+}
+
+
+/* user-review section */
+.user-review-section{
+    width: 80%;
+    margin: 50px auto;
+
+}
+.section-container h4{
+    color: aliceblue;
+    font-size: 30px;
+    font-weight: bold;
+}
+.section-container h5{
+    font-size: 18px;
+    color: #f1c40f;
+    transition: all 0.3s ease;
+}
+.section-container h5:hover {
+    font-size: 20px; 
+    color: #e67e22; 
+    cursor: pointer;
+}
+.user-review-section-tittle{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    align-items: center;
+    
+}
+.comment-box{
+    width: 80%;
+    min-height: 800px;
+    border-radius: 15px;
+    background-color: #34495e;
+}
+.comment-box {
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: space-between;
+    gap: 10px; /* Optional: Adds space between comment cards */
+    padding: 20px; /* Optional: Adds padding around the comment box */
+}
+
+.comment-card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Optional: Adds space between individual comments */
+    width: 90%;
+    margin: 1% 0 1% 3%;
+}
+
+.comment {
+    background-color: #f9f9f9; /* Light background color for the comment card */
+    border: 1px solid #ddd; /* Light border for the comment card */
+    border-radius: 8px; /* Rounded corners */
+    padding: 15px; /* Padding inside the comment card */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow effect */
+}
+
+.comment strong {
+    font-size: 16px; /* Style for the commenter's name */
+    color: #333; /* Darker color for the name */
+}
+
+.comment p {
+    margin: 5px 0 0; /* Margin adjustments for the comment content */
+    font-size: 14px; /* Style for the comment content */
+    color: #555; /* Slightly lighter color for the content */
+}
+.pagination-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pagination-buttons button {
+    background-color: #f1c40f;
+    color: #070F2B;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.pagination-buttons button:disabled {
+    background-color: #ddd;
+    cursor: not-allowed;
+}
+
+.pagination-buttons button:hover:not(:disabled) {
+    background-color: #e67e22;
+}
+.youtube-comments-section{
+    width: 80%;
+    margin: 0 auto;
+}
+.youtube-comments-section h4{
+ color: #ddd;
+}
+.youtube-comment-box{
+    width: 80%;
+    min-height: 800px; /* Set minimum height */
+    border-radius: 15px;
+    background-color: #34495e;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+
+.youtube-comments {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    width: 90%;
+    margin: 20px auto ;
+    
+}
+
+.youtube-comment {
+    display: flex;
+    align-items: flex-start;
+    background-color: #ffffff;
+    padding: 8px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    
+}
+
+.youtube-comment img.author-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 5px;
+}
+
+.youtube-comment div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.youtube-comment strong {
+    font-size: 15px;
+    color: #333;
+}
+
+.youtube-comment p {
+    margin: 0;
+    font-size: 14px;
+    color: #555;
+}
+
+@media (max-width: 900px) {
+
+.detailtop-container{
+    width: 95%;
+    margin: 0 auto;
+    padding: 1rem 0 0 0;
+}
+.detailtop-container h1{
+    font-size: 32px;
+}
+.Detailtop h2{
+    font-size: 20px;
+}
+.topleft img{
+    width: 200px;
+    
+}
+.Detailtop{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+.social-share-buttons h3{
+    font-size: 16px;
+
+}
+.share-button{
+    size: 5;
+}
+.rating-of-movie h3{
+    font-size: 20px;
+}
+.leave-your-rating h4{
+    font-size: 18px;
+}
+.leave-your-rating .fa-star {
+    width: 20px; /* Adjust the size as needed */
+    height: 20px;
+    
+  }
+  .topright iframe{
+    width: 400px;
+    height: 200px;
+    border-radius: 10px;
+}.detail-info{
+    width: 95%;
+}
+.detail-info h4{
+    font-size: 20px;
+}
+.detail-info p{
+    font-size: 15px;
+}
+.detail-info h5{
+    font-size: 17px;
+}
+.user-review-section{
+    width: 95%;
+    
+}
+.user-review-section-tittle{
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.comment-box{
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+.user-review-section-tittle h4{
+    font-size: 25px;
+}
+.youtube-comments-section{
+    width: 95%;
+}
+.youtube-comments-section h4{
+    color: white;
+}
+.youtube-comment-box{
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.youtube-comment img.author-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 5px;
+}
+.youtube-comment strong {
+    font-size: 13px;
+    color: #333;
+}
+
+.youtube-comment p {
+    margin: 0;
+    font-size: 12px;
+    color: #555;
+}
+}

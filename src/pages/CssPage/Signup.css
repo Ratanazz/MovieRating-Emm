@@ -1,0 +1,70 @@
+/* Signup.css */
+.signup-bg {
+    background: url('https://img.freepik.com/free-photo/camcorder-with-filmstrip-peach-colored-backdrop_23-2148188116.jpg?t=st=1713895378~exp=1713898978~hmac=0a9337d0e9ad0a561e7737d89df4ea23b2d311c334c7644c29f8b4beb1819fe8&w=996') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .signup-container {
+    width: 80%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.402); /* Add background color with opacity */
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    color: #000;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .btn-primary {
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(27, 26, 85, 1);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s; /* Add transition for smooth hover effect */
+  }
+  
+  .btn-primary:hover {
+    background-color: rgba(27, 26, 85, 0.9);
+  }
+  
+  .login-link {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .login-link p {
+    margin: 0;
+  }
+  
+  .login-link a {
+    color: #1b1a55;
+    text-decoration: underline;
+    transition: color 0.2s;
+  }
+  
+  .login-link a:hover {
+    color: #000;
+  }
+  

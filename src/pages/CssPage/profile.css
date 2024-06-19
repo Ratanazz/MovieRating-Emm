@@ -1,0 +1,45 @@
+.profile-container{
+    width: 80%;
+    height: 100vh;
+    margin: 0 auto;
+    
+}
+.profile-section{
+    background-color: #ced6e0;
+    height: 400px;
+    padding: 30px;
+    border-radius: 20px;
+}
+.adoption-status{
+    background-color: #ced6e0;
+    height: 300px;
+    padding: 30px;
+    margin-top: 10px;
+    border-radius: 20px;
+}
+
+.profile-container h1{
+    text-align: center;
+}
+.info-user img{
+    width: 150px;
+    height: 150px;
+    margin-right:25px ;
+}
+.info-user{
+    display: flex;
+    align-items: flex-end;
+    margin-top: 100px;
+    
+}
+.info-text h2{
+    font-weight: bold;
+    
+}
+.info-text-span{
+    margin-left: 10px;
+}
+
+.adoption-status h3{
+    font-weight: bold;
+}

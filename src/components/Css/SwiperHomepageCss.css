@@ -1,0 +1,140 @@
+.SwiperHomepage {
+    height: 100%;
+  }
+  
+  .SwiperHomepage html,
+  .SwiperHomepage body {
+    position: relative;
+    height: 100%;
+  }
+  
+  .SwiperHomepage body {
+    background: #eee;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: white;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .SwiperHomepage .mySwiper {
+    width: 80%;
+    height: 100%;
+  }
+  
+  .SwiperHomepage .swiper-slide {
+    
+    font-size: 18px;
+    /* change here */
+    /* background: #fff; */
+    background-image: url('../../../public/assets/Cinema_Bannerblack.png');
+    /* Center slide text vertically */
+    
+    justify-content: center;
+    align-items: center;
+  }
+  
+  
+ 
+  .SwiperHomepage .swiper-slide h1,h2,h3 {
+    color: white; /* Change font color to white */
+  }
+  .SwiperHomepage .swiper-slide h1 {
+   font-size: 50px;
+   font-weight: bold ;
+  }
+  .SwiperHomepage .swiper-slide h3 {
+    font-size: 20px;
+    font-weight: bold ;
+    padding-left: 10px;
+   }
+  .SwiperHomepage .swiper-slide h2 {
+    font-size: 20px;
+    font-weight: 400;
+  }
+  
+  
+  .info1{
+    display: flex;
+    margin-top: 5%;
+    flex-direction: column;
+      align-items: center;
+    
+  }
+  .Card{
+    display: flex;
+    justify-content: space-between ;
+    padding: 5% 8% ;
+    
+  }
+ 
+  .Poster img{
+    width: 300px;
+    height: 350px;
+    border-radius: 10px;
+    
+  }
+  .rate{
+    display: flex;
+    align-items: center;
+  }
+  .rate h3{
+    margin: 0;
+  }
+  /* Responsive adjustments */
+@media (max-width: 1200px) {
+  .SwiperHomepage .mySwiper {
+      width: 90%;
+  }
+}
+
+@media (max-width: 992px) {
+  .SwiperHomepage .mySwiper {
+      width: 95%;
+      height: 50vh;
+  }
+  .SwiperHomepage .swiper-slide h1 {
+      font-size: 40px;
+  }
+  .SwiperHomepage .swiper-slide h3, .SwiperHomepage .swiper-slide h2 {
+      font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .SwiperHomepage .mySwiper {
+      width: 100%;
+  }
+  .SwiperHomepage .swiper-slide h1 {
+      font-size: 35px;
+  }
+  .SwiperHomepage .swiper-slide h3, .SwiperHomepage .swiper-slide h2 {
+      font-size: 16px;
+  }
+  .Poster img {
+      width: 250px;
+      height: 300px;
+  }
+  .info1{
+      flex-direction: column;
+      align-items: center;
+  }
+  .Card {
+      flex-direction: column;
+      align-items: center;
+      padding: 5%;
+  }
+}
+
+@media (max-width: 576px) {
+  .SwiperHomepage .swiper-slide h1 {
+      font-size: 30px;
+  }
+  .SwiperHomepage .swiper-slide h3, .SwiperHomepage .swiper-slide h2 {
+      font-size: 14px;
+  }
+  .Poster img {
+      width: 200px;
+      height: 250px;
+  }
+}

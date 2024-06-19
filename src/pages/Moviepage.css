@@ -1,0 +1,111 @@
+.MoviePage{
+    min-height: 200vh;
+    background: #070F2B;
+}
+.moviepage-tittle h1{
+    text-align: center;
+    color: #dbe1e6;
+    font-weight: bold;
+    padding: 20px 0;
+}
+
+.cardgroup{
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    justify-content: center;
+    margin: 0 auto;
+}
+.card1{
+    margin: 1.5rem 0.8rem;
+    
+    background-color: #dbe1e6;
+    height: 400px;
+    border-radius: 10px;
+    overflow: hidden;
+  transition: transform 0.2s ease-in-out;
+}
+.card1:hover{
+    transform: scale(1.03);
+}
+.card1 img{
+    width: 100%; 
+    height: 250px;
+    border-radius: 10px;
+}
+.release_date{
+    padding: 0 6px;
+}
+.release_date h1{
+    font-size: 21px;
+}
+.release_date h2{
+    font-size: 15px;
+    color: #070F2B;
+}
+.card-body{
+    padding: 10px 8px;
+}
+.info-span{
+    font-weight: 500;
+}
+.link-style {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit text color from parent */
+}
+.movie-page-container{
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+}
+.pagination{
+    margin: 0 auto;
+    display: flex;
+}
+
+@media (max-width: 1200px) {
+    
+}
+
+@media (max-width: 992px) {
+    
+}
+
+@media (max-width: 768px) {
+    .cardgroup {
+        flex-direction: column; /* Change flex direction to column for smaller screens */
+        align-items: center; /* Center align items */
+    }
+
+    .card1 {
+        width: 80%; /* Adjust card width */
+        margin: 10px 0; /* Add margin between cards */
+        height: auto; /* Set height to auto */
+    }
+}
+
+@media (max-width: 576px) {
+    .cardgroup{
+        width: 100%;
+    }
+    .card1{
+        width: 50%;
+        margin: 10px 0;
+        height: 320px;
+    }
+    .card1 img{
+        height: 200px;
+        object-fit: cover;
+    }
+    .release_date h1{
+        font-size: 16px;
+        font-weight: 700;
+    }
+    .release_date h2{
+        font-size: 14px;
+        
+    }
+    .release_date{
+        padding: 0 4px;
+    }
+}

@@ -1,0 +1,38 @@
+.navbar-brand-tittle {
+    font-weight: bold;
+  }
+  
+  .navbar-text h1 {
+    margin: 0 3px;
+    font-weight: 700;  /* Bold font */
+    font-size: 20px;
+    color: #333;  /* Adjust color as desired */
+    transition: font-size 0.2s ease-in-out;  /* Smooth transition */
+  }
+  
+  .navbar-text h1:hover {
+    font-size: 22px;  /* Increase font size on hover */
+    color: #007bff;  /* Change color to blue on hover (adjust as needed) */
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);  /* Subtle shadow for depth */
+  }
+  
+  .navbar-text h2 {
+    font-weight: 700;  /* Bold font */
+    font-size: 17px;
+    color: #333;  /* Adjust color as desired */
+    transition: font-size 0.2s ease-in-out;  /* Smooth transition */
+  }
+  
+  .navbar-text h2:hover {
+    margin: 0 3px;
+    font-size: 19px;  /* Increase font size on hover */
+    color: #007bff;  /* Change color to blue on hover (adjust as needed) */
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);  /* Subtle shadow for depth */
+  }
+  
+  /* Add this to reset the container margin and padding */
+  .custom-container {
+    margin: 0 auto;
+    padding: 0 !important;
+  }
+  

@@ -1,0 +1,17 @@
+/* Custom CSS for the modal */
+.custom-modal .modal-backdrop {
+    background-color: rgba(0, 0, 0, 0.1); /* Adjust the opacity to your liking */
+  }
+  
+  .custom-modal .modal-dialog {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .custom-modal .modal-content {
+    background-color: #fff; /* Adjust background color if needed */
+    border-radius: 8px;
+  }
+  

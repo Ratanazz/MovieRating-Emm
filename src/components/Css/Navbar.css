@@ -1,0 +1,41 @@
+.navbar {
+    background: rgba(27, 26, 85, 1)!important;
+    color: #fff;
+    padding: 15px 20px;
+  }
+  
+  .navbar-brand {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .navbar-nav {
+    color: #fff !important;
+    margin-left: auto;
+  }
+  
+  .nav-link {
+    color: #fff !important;
+    margin-left: 15px;
+    transition: color 0.2s, background-color 0.2s; /* Add transition for smooth hover effect */
+  }
+  
+  .nav-link:hover {
+    color: aquamarine !important; /* Change color on hover */
+    background-color: #1b1a55 !important; /* Change background color on hover */
+  }
+  
+  /* Profile button */
+  .profile-icon {
+    border-radius: 50%;
+    border: 2px solid #fff;
+    padding: 8px;
+    margin-right: 5px;
+    transition: transform 0.2s; /* Add transition for smooth hover effect */
+  }
+  
+  .profile-icon:hover {
+    transform: scale(1.1); /* Add hover effect for profile icon */
+  }
+  
