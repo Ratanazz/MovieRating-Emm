@@ -193,7 +193,7 @@ function MovieDetails() {
                             <FontAwesomeIcon icon={faStar} className='rating-icon' style={{ color: "#FFD43B" }} />
                             <h4>Leave Your Rating</h4>
                         </div>
-                        <iframe src={movie.trailer} frameBorder="0" title="Movie Trailer"></iframe>
+                        <iframe src={movie.trailer} frameBorder="0"></iframe>
                     </div>
                 </div>
             </div>
@@ -204,41 +204,96 @@ function MovieDetails() {
                 </div>
                 <div className="moviedetail-info">
                     <h4 className="red-line-heading">Content Rated:</h4>
-                    <h5>{movie.rated}</h5>
-                    <h4 className="red-line-heading">Duration:</h4>
-                    <h5>{movie.duration}</h5>
-                    <h4 className="red-line-heading">Language:</h4>
-                    <h5>{movie.language}</h5>
-                    <h4 className="red-line-heading">Year of Release:</h4>
-                    <h5>{movie.release_year}</h5>
+                    <h5>{movie.rated_type}</h5>
+                </div>
+                <div className="moviedetail-info">
+                    <h4 className="red-line-heading">Genre:</h4>
+                    <h5>{movie.genre}</h5>
+                </div>
+                <div className="moviedetail-info">
+                    <h4 className="red-line-heading">Director:</h4>
+                    <h5>{movie.director}</h5>
+                </div>
+                <div className="moviedetail-info">
+                    <h4 className="red-line-heading">Writer:</h4>
+                    <h5>{movie.writer}</h5>
+                </div>
+                <div className="moviedetail-info">
+                    <h4 className="red-line-heading">Release Date:</h4>
+                    <h5>{movie.release_date}</h5>
+                </div>
+                <div className="moviedetail-info">
+                    <h4 className="red-line-heading">RunTime:</h4>
+                    <h5>{movie.runtime_minutes}</h5>
+                </div>
+                <div className="moviedetail-info">
+                    <h4 className="red-line-heading">Production:</h4>
+                    <h5>{movie.production}</h5>
                 </div>
             </div>
-            <div className="user-comments">
-                <h4 className="red-line-heading">User Comments</h4>
-                {currentComments.map((comment) => (
-                    <div key={comment.id} className="comment">
-                        <p>{comment.content}</p>
+            <div className="user-review-section">
+                <div className="section-container">
+                    <div className="user-review-section-tittle">
+                        <h4 className="red-line-heading">Audience Reviews</h4>
+                        <h5 onClick={openModal}>+ Your Review</h5>
                     </div>
-                ))}
-                <div className="pagination">
-                    <button onClick={handlePreviousPage} disabled={currentPage === 1}>Previous</button>
-                    <button onClick={handleNextPage} disabled={currentPage === Math.ceil(comments.length / commentsPerPage)}>Next</button>
+                    <div className="comment-box">
+                        <div className="comment-card">
+                            {currentComments.map(comment => (
+                                <div key={comment.id} className="comment">
+                                    <strong>{comment.user.name}</strong> said:
+                                    <p>{comment.content}</p>
+                                    {comment.rating && (
+                                        <p>Rating: {comment.rating.rating}</p>
+                                    )}
+                                </div>
+                            ))}
+                        </div>
+                        <div className="pagination-buttons">
+                            <button onClick={handlePreviousPage} disabled={currentPage === 1}>Previous</button>
+                            <button onClick={handleNextPage} disabled={currentPage === Math.ceil(comments.length / commentsPerPage)}>Next</button>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div className="youtube-comments">
+            <div className="youtube-comments-section">
                 <h4 className="red-line-heading">YouTube Comments</h4>
-                {currentYoutubeComments.map((comment, index) => (
-                    <div key={index} className="youtube-comment">
-                        <p>{comment.snippet.topLevelComment.snippet.textDisplay}</p>
+                <div className="youtube-comment-box">
+                    {currentYoutubeComments.length > 0 ? (
+                        <div className="youtube-comments">
+                            {currentYoutubeComments.map(item => (
+                                <div key={item.id} className="youtube-comment">
+                                    <img src={item.snippet.topLevelComment.snippet.authorProfileImageUrl} alt="User" className="author-image" />
+                                    <div>
+                                        <strong>{item.snippet.topLevelComment.snippet.authorDisplayName}</strong>
+                                        <p>{item.snippet.topLevelComment.snippet.textDisplay}</p>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    ) : (
+                        <p>No YouTube comments available.</p>
+                    )}
+                    <div className="pagination-buttons">
+                        <button onClick={handlePreviousYoutubePage} disabled={currentYoutubePage === 1}>Previous</button>
+                        <button onClick={handleNextYoutubePage} disabled={currentYoutubePage === Math.ceil(youtubeComments.length / youtubeCommentsPerPage)}>Next</button>
                     </div>
-                ))}
-                <div className="pagination">
-                    <button onClick={handlePreviousYoutubePage} disabled={currentYoutubePage === 1}>Previous</button>
-                    <button onClick={handleNextYoutubePage} disabled={currentYoutubePage === Math.ceil(youtubeComments.length / youtubeCommentsPerPage)}>Next</button>
                 </div>
             </div>
-            <Commentmodal show={showModal} handleClose={closeModal} handleSubmit={handleCommentSubmit} />
-            <UserRating show={showRatingModal} handleClose={closeRatingModal} handleSubmit={handleRatingSubmit} />
+            <Commentmodal
+                showModal={showModal}
+                closeModal={closeModal}
+                newComment={newComment}
+                setNewComment={setNewComment}
+                handleCommentSubmit={handleCommentSubmit}
+            />
+            <UserRating
+                showRatingModal={showRatingModal}
+                closeRatingModal={closeRatingModal}
+                userRating={userRating}
+                setUserRating={setUserRating}
+                handleRatingSubmit={handleRatingSubmit}
+            />
         </div>
     );
 }
