@@ -145,8 +145,8 @@ function MovieDetails() {
     const shareHashtag = '#movies #moviereview'; 
 
     return (
-        <div className="Moviedetail-container">
-                    <Helmet>
+        <>
+        <Helmet>
             <meta property="og:url" content={window.location.href} />
             <meta property="og:type" content="website" />
             <meta property="og:title" content={`${movie.name} - Movie Rating`} />
@@ -159,6 +159,8 @@ function MovieDetails() {
             <meta property="og:rating" content={averageRating.toFixed(1)} />
             <meta property="og:rating:scale" content="10" />
         </Helmet>
+        <div className="Moviedetail-container">
+                    
             <div className="detailtop-container">
                 <h1>{movie.name}</h1>
                 <div className="Detailtop">
@@ -303,6 +305,7 @@ function MovieDetails() {
                 handleRatingSubmit={handleRatingSubmit}
             />
         </div>
+        </>
     );
 }
 
