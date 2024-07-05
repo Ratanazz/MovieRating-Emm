@@ -146,15 +146,19 @@ function MovieDetails() {
 
     return (
         <div className="Moviedetail-container">
-            <Helmet>
-                <meta property="og:url" content={window.location.href} />
-                <meta property="og:title" content={`${movie.name} - Movie Rating`} />
-                <meta property="og:description" content={`${movie.summary.substring(0, 100)}... See more on ${window.location.href}`} />
-                <meta property="og:image" content={movie.image_poster} />
-                <meta property="og:type" content="article" />
-                <meta property="og:site_name" content="Your Site Name" />
-                <meta property="og:rating" content={movie.rating} />
-            </Helmet>
+                    <Helmet>
+            <meta property="og:url" content={window.location.href} />
+            <meta property="og:type" content="website" />
+            <meta property="og:title" content={`${movie.name} - Movie Rating`} />
+            <meta property="og:description" content={`${movie.summary.substring(0, 200)}... Read more and rate this movie!`} />
+            <meta property="og:image" content={movie.image_poster} />
+            <meta property="og:image:width" content="1200" />
+            <meta property="og:image:height" content="630" />
+            <meta property="fb:app_id" content="YOUR_FACEBOOK_APP_ID" />
+            <meta property="og:site_name" content="Your Site Name" />
+            <meta property="og:rating" content={averageRating.toFixed(1)} />
+            <meta property="og:rating:scale" content="10" />
+        </Helmet>
             <div className="detailtop-container">
                 <h1>{movie.name}</h1>
                 <div className="Detailtop">
