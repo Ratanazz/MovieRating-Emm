@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import api from '../api';
+import { Helmet } from 'react-helmet'; // For OGP meta tags
 import { useParams } from 'react-router-dom';
 import './CssPage/MovieDetailCss.css';
 import { FacebookShareButton, FacebookIcon, TwitterShareButton, TwitterIcon, TelegramShareButton, TelegramIcon } from 'react-share';
@@ -145,6 +146,15 @@ function MovieDetails() {
 
     return (
         <div className="Moviedetail-container">
+            <Helmet>
+                <meta property="og:url" content={window.location.href} />
+                <meta property="og:title" content={`${movie.name} - Movie Rating`} />
+                <meta property="og:description" content={`${movie.summary.substring(0, 100)}... See more on ${window.location.href}`} />
+                <meta property="og:image" content={movie.image_poster} />
+                <meta property="og:type" content="article" />
+                <meta property="og:site_name" content="Your Site Name" />
+                <meta property="og:rating" content={movie.rating} />
+            </Helmet>
             <div className="detailtop-container">
                 <h1>{movie.name}</h1>
                 <div className="Detailtop">
@@ -206,7 +216,7 @@ function MovieDetails() {
                 </div>
                 <div className="moviedetail-info">
                     <h4 className="red-line-heading">Writer:</h4>
-                    <h5>{movie.wrtitter}</h5>
+                    <h5>{movie.writer}</h5>
                 </div>
                 <div className="moviedetail-info">
                     <h4 className="red-line-heading">Release Date:</h4>
