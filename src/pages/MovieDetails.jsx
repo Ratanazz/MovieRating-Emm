@@ -50,7 +50,7 @@ function MovieDetails() {
                     setAverageRating(Number(response.data.averageRating) || 0);
                 }
                 // Set the full image URL
-            setFullImageUrl(`https://backendmovierating-production.up.railway.app${response.data.movie.image_poster}`);
+                setFullImageUrl(`https://backendmovierating-production.up.railway.app${response.data.movie.image_poster}`);
 
 
                 if (response.data.youtubeVideoId) {
@@ -151,22 +151,18 @@ function MovieDetails() {
     return (
         <>
                     <Helmet>
-                <title>{movie.name} - Movie Rating</title>
-                <meta property="og:url" content={`https://backendmovierating-production.up.railway.app/api/movies/${id}`} />
-                <meta property="og:type" content="website" />
-                <meta property="og:title" content={`${movie.name} - Movie Rating`} />
-                <meta property="og:description" content={movie.summary ? `${movie.summary.substring(0, 200)}...` : 'Check out this movie!'} />
-                <meta property="og:image" content={fullImageUrl} />
-                <meta property="og:image:width" content="1200" />
-                <meta property="og:image:height" content="630" />
-                <meta property="og:site_name" content="Your Movie Rating Site" />
-                <meta property="og:rating" content={averageRating.toFixed(1)} />
-                <meta property="og:rating:scale" content="10" />
-                <meta property="og:image:type" content="image/jpeg" />
-                <meta property="og:image:alt" content={`${movie.name} poster`} />
-                <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:image" content={fullImageUrl} />
-            </Helmet>
+          <title>{movie.name} - Movie Rating</title>
+         <meta property="og:url" content={`https://backendmovierating-production.up.railway.app/api/movies/${id}`} />
+          <meta property="og:type" content="website" />
+         <meta property="og:title" content={`${movie.name} - Movie Rating`} />
+         <meta property="og:description" content={movie.summary ? `${movie.summary.substring(0, 200)}...` : 'Check out this movie!'} />
+         <meta property="og:image" content={fullImageUrl} />
+         <meta property="og:image:width" content="1200" />
+         <meta property="og:image:height" content="630" />
+         <meta property="og:site_name" content="Your Movie Rating Site" />
+         <meta property="og:rating" content={averageRating.toFixed(1)} />
+         <meta property="og:rating:scale" content="10" />
+         </Helmet>
         <div className="Moviedetail-container">
                     
             <div className="detailtop-container">
@@ -179,13 +175,13 @@ function MovieDetails() {
                             <h3 style={{ fontSize: '20px', fontWeight: 'bold' }}>Share To:</h3>
                             <div className="buttonshare">
                             <FacebookShareButton 
-                                url={window.location.href}
-                                quote={`Check out ${movie.name}! Genre: ${movie.genre}, Rating: ${averageRating.toFixed(1)}/10`}
-                                hashtag="#movies"
-                                className="share-button"
-                            >
-                                <FacebookIcon size={35} round />
-                            </FacebookShareButton>
+                            url={window.location.href}
+                            quote={`Check out "${movie.name}"! \nGenre: ${movie.genre}\nRating: ${averageRating.toFixed(1)}/10\nSummary: ${movie.summary.substring(0, 100)}...`}
+                            hashtag="#MovieReview"
+                            className="share-button"
+                        >
+                            <FacebookIcon size={35} round />
+                        </FacebookShareButton>
                             </div>
                             <div className='buttonshare'>
                                 <TwitterShareButton url={shareUrl} title={shareTitle} hashtags={['movies', 'moviereview']} via="your_mention" // Replace with your Twitter username
